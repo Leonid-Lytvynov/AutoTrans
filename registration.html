@@ -1,0 +1,177 @@
+<html lang="ru" class="Desktop Other Windows Chrome">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Регистрация | AUTOTRANS INV LTD</title>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="format-detection" content="telephone=no">
+
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+   <link rel="stylesheet" type="text/css" href="fonts/icomoon/style.css">
+   <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
+   <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+   <link rel="stylesheet" type="text/css" href="css/selectric.css">
+   <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+   <script type="text/javascript" src="js/detect.min.js"></script>
+   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+   <script type="text/javascript" src="js/jquery.selectric.min.js"></script>
+   <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+   <script type="text/javascript" src="js/clipboard.min.js"></script>
+   <script type="text/javascript" src="js/clock.js"></script>
+   <script type="text/javascript" src="js/modal.js"></script>
+   <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+
+<body>
+   <section class="wrapper">
+      <div class="loginPage">
+         <div class="wrapIn">
+            <div class="logo invisLink">
+               <a href="index.html"></a>
+               <img src="img/logowhite.png" alt="">
+               <span class="name">autotrans<br><span class="desr">company</span></span>
+            </div>
+            <div class="lineLogTop">
+               <a href="#" onclick="history.back();" class="linkBack"><span class="iconBl icon-back_button"><span
+                        class="path1"></span><span class="path2"></span></span>вернуться</a>
+               <div class="supBl">
+                  <span class="iconBl icon-support"><span class="path1"></span><span class="path2"></span></span>
+                  <span class="tit">СЛУЖБА ПОДДЕРЖКИ:</span>
+                  <a href="tel:" class="tel">+7 (000)-123-45-67</a>
+               </div>
+               <div class="logInBl">
+                  <a href="login.html" class="log"><span class="iconBl icon-login_button"></span>вход</a>
+               </div>
+            </div>
+
+
+            <div class="formaLog formaReg">
+               <span class="title">Регистрация <span class="small">аккаунта</span></span>
+               <span class="desr">Для того, чтобы получить доступ к личному кабинету инвестора, заполните форму,
+                  представленную ниже.</span>
+
+
+
+               <form method="post" name="register_frm" action="registration">
+                  <input name="__Cert" value="7c0d60ee" type="hidden">
+                  <div class="inputList">
+                     <div class="inputLine">
+                        <label for="">ВАШ ЛОГИН:</label>
+                        <input name="uLogin" id="register_frm_uLogin" value="" type="text">
+                     </div>
+                     <div class="inputLine">
+                        <label for="">ВАШ E-MAIL:</label>
+                        <input name="uMail" id="register_frm_uMail" value="" type="email">
+                     </div>
+                     <div class="inputLine">
+                        <label for="">ПРИДУМАЙТЕ ПАРОЛЬ:</label>
+                        <input name="uPass" id="register_frm_uPass" value="" type="password">
+                     </div>
+                     <div class="inputLine">
+                        <label for="">Повторите пароль:</label>
+                        <input name="Pass2" id="register_frm_Pass2" value="" type="password">
+
+                     </div>
+                     <div class="inputLine">
+                        <label for="">ВАС ПРИГЛАСИЛ:</label>
+                        <input type="text" name="uRef" value="">
+                     </div>
+                     <div class="chekBl">
+                        <input type="checkbox" id="chk1" name="Agree" value="1">
+                        <label for="chk1">Вам есть 18 лет и Вы ознакомлены со всеми<br>правилами и условиями
+                           инвестирования.</label>
+                     </div>
+                  </div>
+                  <button class="btn btnPurple" type="submit" name="register_frm_btn">
+                     <span class="txt"> <span class="iconBl icon-reg_button"></span>ПРИНЯТЬ УЧАСТИЕ</span>
+                  </button>
+               </form>
+
+
+               <div class="linksBot">
+                  <ul>
+                     <li>
+                        <span class="tit">Уже присоединились?</span>
+                        <a href="login.html" class="link">Войти</a>
+                     </li>
+                     <li>
+                        <span class="tit">Нет аккаунта?</span>
+                        <a href="registration.html" class="link">Зарегистрироваться</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+
+            <script type="text/javascript">
+               function chkLogin() {
+                  $('#register_frm_uLogin').removeClass('error');
+                  $('#login_check').html('');
+                  $.ajax(
+                     {
+                        type: 'POST',
+                        url: 'ajax',
+                        data: 'module=account/register&do=chklogin&login=' +
+                           encodeURIComponent($('#register_frm_uLogin').val()),
+                        success:
+                           function (ex) {
+                              if (ex == 1) {
+                                 $('#register_frm_uLogin').addClass('error');
+                                 $('#login_check').html('занят');
+                              }
+                           }
+                     }
+                  );
+               }
+               tid2 = 0;
+               $('#register_frm_uLogin').keypress(
+                  function () {
+                     clearTimeout(tid2);
+                     tid2 = setTimeout(function () { chkLogin(); }, 1000);
+                  }
+               );
+               chkLogin();
+            </script>
+
+            <script type="text/javascript">
+               function chkMail() {
+                  $('#register_frm_uMail').removeClass('error');
+                  $('#mail_check').html('');
+                  $.ajax(
+                     {
+                        type: 'POST',
+                        url: 'ajax',
+                        data: 'module=account/register&do=chkmail&mail=' +
+                           encodeURIComponent($('#register_frm_uMail').val()),
+                        success:
+                           function (ex) {
+                              if (ex == 1) {
+                                 $('#register_frm_uMail').addClass('error');
+                                 $('#mail_check').html('занят');
+                              }
+                           }
+                     }
+                  );
+               }
+               tid = 0;
+               $('#register_frm_uMail').keypress(
+                  function () {
+                     clearTimeout(tid);
+                     tid = setTimeout(function () { chkMail(); }, 1000);
+                  }
+               );
+               chkMail();
+            </script>
+         </div>
+      </div>
+   </section>
+</body>
+
+</html>
