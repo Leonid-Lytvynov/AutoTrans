@@ -2383,9 +2383,13 @@ header.headPage::after {
     width: calc(50% - 15px);
     padding: 22px 22px 31px;
     margin-bottom: 32px;
+    min-height: 170px;
+    position: relative;
+    min-height: 400px;
+    max-height: 400px;
 }
 
-.newsList .item .picture::before {
+.newsList .item::before {
     content: "";
     position: absolute;
     left: -10px;
@@ -2393,21 +2397,23 @@ header.headPage::after {
     width: calc(100% + 20px);
     height: calc(100% + 20px);
     top: -9px;
+    z-index: -1;
 }
 
 .newsList .item .dateBl::before {
     content: "";
     position: absolute;
-    left: 0px;
+    left: -30px;
     top: -2px;
     background-image: url(../img/circle_date.png);
     width: 131px;
-    height: 74px;
+    height: 76px;
     z-index: -1;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
+    z-index: -1;
 }
 
 .newsList .item .dateBl {
@@ -2456,7 +2462,8 @@ header.headPage::after {
     text-transform: uppercase;
     font-weight: 700;
     display: table;
-    margin-top: 27px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     letter-spacing: 0.5px;
     text-decoration: underline;
     text-decoration-color: transparent;
@@ -2483,9 +2490,9 @@ header.headPage::after {
     margin: 57px 0 0;
 }
 
-.contactsBlock .contactsLine .mapBl {
+/* .contactsBlock .contactsLine .mapBl {
     left: calc(50% + 21px);
-}
+} */
 
 .contactsBlock .contactsLine .picture {
     right: calc(100% - -13px);

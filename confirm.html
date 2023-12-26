@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <title>Вхід | AUTOTRANS INV LTD</title>
+   <title>Підтвердження | AUTOTRANS INV LTD</title>
 
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="format-detection" content="telephone=no">
@@ -38,40 +38,33 @@
                   <a href="tel:" class="tel">+38 (000)-123-45-67</a>
                </div>
                <div class="logInBl">
-                  <a href="registration.html" class="reg"><span class="iconBl icon-reg_button"></span>реєстрація</a>
+                  <a href="login.html" class="log"><span class="iconBl icon-login_button"></span>Вхід</a>
                </div>
             </div>
 
 
             <div class="formaLog">
-               <span class="title">Авторизація</span>
-               <span class="desr">Для того, щоб отримати доступ до вашого облікового запису, введіть комбінацію
-                  логін-пароль,
-                  зазначену вами під час реєстрації.</span>
+               <span class="title">Подтверждение</span>
+               <span class="desr">Давно з'ясовано, що при оцінці дизайну та композиції читаний текст заважає
+                  зосередитися. Lorem Ipsum використовують тому.</span>
 
 
-               <form method="post" action="" name="login_frm">
-                  <input name="URL" id="login_frm_URL" value="" type="hidden">
-                  <input type="hidden" name="Remember" value="1">
-                  <input name="__Cert" value="97367782" type="hidden">
+               <form method="post" action="confirm" name="confirm_frm">
+                  <input name="__Cert" value="0a570d4e" type="hidden">
                   <div class="inputList">
                      <div class="inputLine">
-                        <label for="">ВАШ ЛОГІН:</label>
-                        <input name="Login" id="login_frm_Login" value="" type="text" required="">
-                     </div>
-                     <div class="inputLine">
-                        <label for="">Введіть пароль або код Google Authenticator:</label>
-                        <input name="Pass" id="login_frm_Pass" type="password" required="">
+                        <label for="">Код:</label>
+                        <input name="Code" id="confirm_frm_Code" value="" type="text">
                      </div>
                      <div class="inputLine captchaBl">
-                        <img src="captcha?f=login_frm" onclick="this.src='captcha?f=login_frm&'+Math.random();"
+                        <img src="captcha?f=confirm_frm" onclick="this.src='captcha?f=confirm_frm&'+Math.random();"
                            border="0" class="captcha">
-                        <input name="__Capt" id="login_frm_capt" type="text" size="8" class="captcha">
+                        <input name="__Capt" id="confirm_frm_capt" type="text" size="8" class="captcha">
 
                      </div>
                   </div>
-                  <button class="btn btnBlue" type="submit" name="login_frm_btn">
-                     <span class="txt"><span class="iconBl icon-login_button"></span>Увійти</span>
+                  <button class="btn btnBlue" type="submit" name="confirm_frm_btn">
+                     <span class="txt"><span class="iconBl icon-login_button"></span>Виконати</span>
                   </button>
                </form>
 
@@ -83,12 +76,14 @@
                         <a href="resetpass.html" class="link">Відновити</a>
                      </li>
                      <li>
-                        <span class="tit">Нет аккаунта?</span>
+                        <span class="tit">Немає облікового запису?</span>
                         <a href="registration.html" class="link">Зареєструватись</a>
                      </li>
                   </ul>
                </div>
             </div>
+
+
          </div>
       </div>
    </section>
