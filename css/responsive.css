@@ -204,9 +204,15 @@
   footer .wrapIn {
     padding-left: 34%;
   }
+  .listPaymentFot {
+    margin-bottom: 0px;
+}
   .listPaymentFot .item {
     background-size: 75%;
   }
+  .listPaymentFot .visa{
+   background-size: 50%;
+}
   footer .circleCompany {
     top: auto;
     bottom: -6px;
@@ -234,6 +240,9 @@
   .contactPageInfo .lineInfo {
     width: 100%;
   }
+  .contactPageInfo .lineInfo ul li+li {
+    padding-left: 0px;
+}
   .linkContactBl {
     flex-wrap: wrap;
     margin-top: 75px;
@@ -642,6 +651,10 @@
     width: 100% !important;
     text-align: center;
   }
+
+  .article-page .article__item{
+    padding: 0px;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -809,13 +822,13 @@
   }
   .auctionBl .list {
     margin: 0;
-    padding: 250px 0 0;
+    padding: 330px 0 0;
   }
   .auctionBl .list .item {
     position: relative;
   }
   .auctionBl .list .item + .item {
-    margin-top: 250px;
+    margin-top: 325px;
   }
   .auctionBl .picAuction {
     -webkit-transform: scale(0.6);
@@ -823,10 +836,10 @@
     -o-transform: scale(0.6);
     transform: scale(0.6);
     position: absolute;
-    top: -289px;
+    top: -420px;
     left: 50%;
     margin-left: -255px;
-    z-index: -1;
+    z-index: 0;
   }
   .lineLogTop .supBl {
     top: auto;
@@ -1469,5 +1482,9 @@
     margin: 0 auto;
     right: auto;
     margin-top: 15px;
+  }
+
+  .article-page .newsList .item{
+    margin-bottom: 50px;
   }
 }

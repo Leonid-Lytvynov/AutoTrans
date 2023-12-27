@@ -2002,7 +2002,7 @@ header:after {
     transform: rotate(180deg);
     display: inline-block;
     vertical-align: middle;
-    top: -4px;
+    top: 0px;
     position: relative;
     margin: 0 10px;
 }
@@ -2072,8 +2072,8 @@ header:after {
 .sliderReviews p {
     color: #363636;
     font-size: 16px;
-    font-weight: 100;
-    font-family: "ProximaNovaT";
+    font-weight: 300;
+    font-family: "ProximaNova";
     display: block;
     width: calc(100% - 38%);
     height: 100%;
@@ -2230,6 +2230,7 @@ footer::after {
 .listPaymentFot {
     width: 100%;
     max-width: 800px;
+    margin-bottom: 70px;
 }
 
 .listPaymentFot .item {
@@ -2385,8 +2386,9 @@ header.headPage::after {
     margin-bottom: 32px;
     min-height: 170px;
     position: relative;
+}
+.news-page .newsList .item {
     min-height: 400px;
-    max-height: 400px;
 }
 
 .newsList .item::before {
@@ -2414,6 +2416,9 @@ header.headPage::after {
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
     z-index: -1;
+}
+.article-page .newsList .item .dateBl::before{
+    left: -15px;
 }
 
 .newsList .item .dateBl {
@@ -2477,6 +2482,21 @@ header.headPage::after {
     line-height: 24px;
 }
 
+.article-page .article__item{
+    margin: 0px 0px 20px;
+    padding: 0px 0px 0px 100px;
+    outline: 0px;
+    border: 0px;
+    font-size: 17px;
+    line-height: 24px;
+    color: rgb(0, 0, 0);
+    font-family: "ProximaNova";
+}
+.article-page .article-title{
+    text-align: center;
+    margin: 15px 0;
+}
+
 .contactsBlock {
     padding: 66px 0 47px;
 }
@@ -2490,9 +2510,6 @@ header.headPage::after {
     margin: 57px 0 0;
 }
 
-/* .contactsBlock .contactsLine .mapBl {
-    left: calc(50% + 21px);
-} */
 
 .contactsBlock .contactsLine .picture {
     right: calc(100% - -13px);
@@ -4005,7 +4022,7 @@ header.headPage::after {
 .youBalance .list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 16px;
 }
 
