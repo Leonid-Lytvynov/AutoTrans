@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <title>Обліковий запис | AUTOTRANS INV LTD</title>
+   <title>Реферальна система | AUTOTRANS INV LTD</title>
 
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="format-detection" content="telephone=no">
@@ -251,215 +251,231 @@
                   <li><a href="../cabinet.html"><span class="iconBl icon-menu_1"></span>Кабінет</a></li>
                   <li><a href="deposit.html"><span class="iconBl icon-menu_3"></span>Відкрити депозит</a>
                   </li>
-                  <li><a href="account.html" class="active"><span class="iconBl icon-menu_2"></span>Налаштування</a>
+                  <li><a href="account.html"><span class="iconBl icon-menu_2"></span>Налаштування</a>
                   </li>
                   <li><a href="operation.html"><span class="iconBl icon-menu_3"></span>Виведення
                         коштів</a></li>
                   <li><a href="operations.html"><span class="iconBl icon-menu_4"></span>Операції</a></li>
-                  <li><a href="refsys.html"><span class="iconBl icon-menu_5"></span>Партнери</a></li>
+                  <li><a href="refsys.html" class="active"><span class="iconBl icon-menu_5"></span>Партнери</a></li>
                   <li><a href="login?out"><span class="iconBl icon-menu_6"></span>Вихід</a></li>
                </ul>
             </div>
             <div class="contentLk">
 
-               <div class="settingsPage">
-                  <h2 class="capTitle">Налаштування</span></h2>
-                  <div class="settingList">
-                     <div class="left">
-                        <div class="settingBl">
-                           <form method="post" action="account" name="account_frm">
-                              <input name="__Cert" value="cfffd371" type="hidden">
-                              <div class="wrap">
-                                 <span class="title">Особисті дані</span>
-                                 <div class="list">
-                                    <div class="inputLine">
-                                       <label for="">логин</label>
-                                       <input type="text" name="uLogin" value="admin" disabled="">
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="">E-mail</label>
-                                       <input type="text" name="uMail" value="admin@admin.admin" disabled="">
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="">ім'я</label>
-                                       <input type="text" name="aName" value="Administrator">
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="">дата народження</label>
-                                       <input type="text" name="aBirth" value="">
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="">країна</label>
-                                       <input type="text" name="aCountry" value="">
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="">Номер телефону</label>
-                                       <input type="text" name="aTel" value="">
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="">Місто</label>
-                                       <input type="text" name="aCity" value="">
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="">профіль у соцмережах</label>
-                                       <input type="text" name="aSocial" value="">
-                                    </div>
-                                 </div>
-                                 <button type="submit" class="linkBlue" name="account_frm_btn">зберегти
-                                    зміни</button>
-                              </div>
-                           </form>
-                        </div>
-                        <div class="settingBl">
-                           <form method="post" action="account" name="account/change_pass_frm">
-                              <input name="__Cert" value="2755b875" type="hidden">
-                              <div class="wrap">
-                                 <span class="title">Зміна пароля</span>
-                                 <div class="inputLine">
-                                    <label for="">Новий пароль</label>
-                                    <input name="Pass" id="account/change_pass_frm_Pass" type="password">
-                                 </div>
-                                 <div class="inputLine">
-                                    <label for="">Старий пароль</label>
-                                    <input name="Pass0" id="account/change_pass_frm_Pass0" type="password">
-                                 </div>
-                                 <div class="inputLine">
-                                    <label for="">повторіть новий пароль</label>
-                                    <input name="Pass2" id="account/change_pass_frm_Pass2" type="password">
-                                 </div>
-                                 <button type="submit" class="linkBlue" name="account/change_pass_frm_btn">зберегти
-                                    зміни</button>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                     <div class="right">
-                        <div class="settingBl">
-                           <form method="post" action="account" name="security_frm">
-                              <input name="__Cert" value="0f643dcd" type="hidden">
-                              <div class="wrap">
-                                 <div class="lineSetting">
-                                    <span class="title">налаштування безпеки</span>
-                                    <div class="inputLine">
-                                       <label for="">часовий пояс (від GMT)</label>
-                                       <input type="text" value="+0:00" name="TZ" />
-                                    </div>
-                                    <div class="chekBl">
-                                       <input type="checkbox" id="chk1" name="aNoMail" value="1">
-                                       <label for="chk1">Не отримувати оповіщення на E-mail</label>
-                                    </div>
-                                 </div>
-                                 <div class="lineSetting">
-                                    <span class="title">Безпека</span>
-                                    <div class="inputLine">
-                                       <label for="">контроль зміни IP-адреси</label>
-                                       <select name="aIPSec" id="security_frm_aIPSec" class="selectricBl">
-                                          <option value="0">- за замовчуванням -</option>
-                                          <option value="1">x.0.0.0</option>
-                                          <option value="2">x.x.0.0</option>
-                                          <option value="3">x.x.x.0</option>
-                                          <option value="4" selected="">x.x.x.x</option>
-                                       </select>
-                                    </div>
-                                    <div class="chekBl">
-                                       <input type="checkbox" id="chk2" name="aSessIP" value="1">
-                                       <label for="chk2">Прив'язувати сесію до IP-адреси</label>
-                                    </div>
-                                    <div class="chekBl">
-                                       <input type="checkbox" id="chk3" name="aSessUniq" value="1">
-                                       <label for="chk3">Заборонити паралельні сесії</label>
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="">Автовихід через N хвилин (0 за замовчуванням)</label>
-                                       <input name="aTimeOut" id="security_frm_aTimeOut" value="" type="text"
-                                          placeholder="0 - по умолчанию">
-                                    </div>
-                                 </div>
-                                 <div class="lineSetting">
-                                    <span class="title">google authenticator</span>
-                                    <input name="GAKey" value="7M6S3W2PNJF5UJQH" type="hidden">
-                                    <div class="googleKeyBl">
-                                       <span class="tit">Для активації <a href="https://www.google.com/landing/2step/"
-                                             target="_blank">Google Authenticator</a> використовуйте ключ:</span>
-                                       <span class="key">7M6S3W2PNJF5UJQH</span>
-                                       <div class="pic"
-                                          style="background-image: url(https://chart.googleapis.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth%3A%2F%2Ftotp%2Fadmin%40demo.chyip.com%3Fsecret%3D7M6S3W2PNJF5UJQH);">
-                                       </div>
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="">введіть код із програми</label>
-                                       <input name="GACode" value="" type="text">
-                                    </div>
 
-                                 </div>
-                                 <button type="submit" class="linkBlue" name="security_frm_btn">зберегти
-                                    зміни</button>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                     <div class="center">
-                        <div class="settingBl">
-                           <form method="post" name="balance/wallets_frm" action="account">
-                              <input name="__Cert" value="d7ffdca2" type="hidden">
-                              <div class="wrap">
-                                 <span class="title">адреси ваших гаманців</span>
-                                 <div class="list">
-                                    <div class="inputLine">
-                                       <label for="balance/wallets_frm_PM[acc]">PerfectMoney:</label>
-                                       <input type="text" name="PM[acc]" id="balance/wallets_frm_PM[acc]" value=""
-                                          placeholder="U1234567">
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="balance/wallets_frm_PY[acc]">Payeer:</label>
-                                       <input type="text" name="PY[acc]" id="balance/wallets_frm_PY[acc]" value=""
-                                          placeholder="P1234567">
-                                    </div>
-                                    <!-- <div class="inputLine">
-                                       <label for="balance/wallets_frm_PYR[acc]">PayeerRUB:</label>
-                                       <input type="text" name="PYR[acc]" id="balance/wallets_frm_PYR[acc]" value=""
-                                          placeholder="P1234567">
-                                    </div> -->
-                                    <div class="inputLine">
-                                       <label for="balance/wallets_frm_CP[acc]">Bitcoin:</label>
-                                       <input type="text" name="CP[acc]" id="balance/wallets_frm_CP[acc]" value=""
-                                          placeholder="12iE8JuJk4ymXVGNnVbH3kpgpx7aaQpT7V">
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="balance/wallets_frm_CPE[acc]">Ethereum:</label>
-                                       <input type="text" name="CPE[acc]" id="balance/wallets_frm_CPE[acc]" value=""
-                                          placeholder="0x...">
-                                    </div>
-                                    <div class="inputLine">
-                                       <label for="balance/wallets_frm_CPL[acc]">Litecoin:</label>
-                                       <input type="text" name="CPL[acc]" id="balance/wallets_frm_CPL[acc]" value=""
-                                          placeholder="1CQW7rHttVWHV8cpaK7ajUDvetZeUTG251">
-                                    </div>
-                                    <!-- <div class="inputLine">
-                                       <label for="balance/wallets_frm_FK1[acc]">Qiwi:</label>
-                                       <input type="text" name="FK1[acc]" id="balance/wallets_frm_FK1[acc]" value=""
-                                          placeholder="+79876543210">
-                                    </div> -->
-                                    <!-- <div class="inputLine">
-                                       <label for="balance/wallets_frm_FK2[acc]">Яндекс деньги:</label>
-                                       <input type="text" name="FK2[acc]" id="balance/wallets_frm_FK2[acc]" value=""
-                                          placeholder="410111222333444">
-                                    </div> -->
-                                    <div class="inputLine">
-                                       <label for="balance/wallets_frm_FK3[acc]">Банківські карти:</label>
-                                       <input type="text" name="FK3[acc]" id="balance/wallets_frm_FK3[acc]" value=""
-                                          placeholder="410111222333444">
-                                    </div>
 
-                                 </div>
-                                 <button type="submit" class="linkBlue" name="balance/wallets_frm_btn">зберегти
-                                    зміни</button>
-                              </div>
-                           </form>
+               <div class="partnersPage">
+                  <h2 class="capTitle">Реферальна <span class="small">інформація</span></h2>
+                  <div class="refInfo">
+                     <div class="wrapIn">
+                        <div class="info">
+                           <div class="inputLine">
+                              <label for="">Ваше персональне посилання</label>
+                              <input type="text" id="reflink"
+                                 value="https://demo.chyip.com/autotrans.company/?partner=admin">
+                              <span class="copyRefLink copyRef" data-clipboard-target="#reflink">Copy</span>
+                           </div>
+                           <ul>
+                              <li>
+                                 <span class="tit">Вас запросив:</span>
+                                 <span class="val">Відсутнє</span>
+                              </li>
+                              <li>
+                                 <span class="tit">Усього партнерів:</span>
+                                 <span class="val">5</span>
+                              </li>
+                              <li>
+                                 <span class="tit">активних партнерів:</span>
+                                 <span class="val">1</span>
+                              </li>
+                              <li>
+                                 <span class="tit">особистих партнерів:</span>
+                                 <span class="val">1</span>
+                              </li>
+                           </ul>
                         </div>
                      </div>
                   </div>
+                  <h2 class="capTitle">Бонусна <span class="small">програма</span></h2>
+                  <div class="bonusPorogTable">
+                     <div class="presentPic"></div>
+                     <div class="listBonus">
+                        <div class="wrap">
+                           <div class="line">
+                              <ul>
+                                 <li>
+                                    <span class="num">1</span>
+                                    <span class="name">Приведи партнерів на 500 USD</span>
+                                 </li>
+                                 <li><span class="val"> Бонус 15 USD</span></li>
+                              </ul>
+                           </div>
+                           <div class="line">
+                              <ul>
+                                 <li>
+                                    <span class="num">2</span>
+                                    <span class="name">Приведи партнерів на 2000 USD</span>
+                                 </li>
+                                 <li><span class="val"> Бонус 100 USD</span></li>
+                              </ul>
+                           </div>
+                           <div class="line">
+                              <ul>
+                                 <li>
+                                    <span class="num">3</span>
+                                    <span class="name">Приведи партнерів на 5000 USD</span>
+                                 </li>
+                                 <li><span class="val"> Бонус 250 USD</span></li>
+                              </ul>
+                           </div>
+                           <div class="line">
+                              <ul>
+                                 <li>
+                                    <span class="num">4</span>
+                                    <span class="name">Приведи партнерів на 10000 USD</span>
+                                 </li>
+                                 <li><span class="val"> Бонус 500 USD</span></li>
+                              </ul>
+                           </div>
+                           <div class="line">
+                              <ul>
+                                 <li>
+                                    <span class="num">5</span>
+                                    <span class="name">Приведи партнерів на 20000 USD</span>
+                                 </li>
+                                 <li><span class="val"> Бонус 1000 USD</span></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="listBonus">
+                        <div class="wrap">
+                           <div class="line">
+                              <ul>
+                                 <li>
+                                    <span class="num">6</span>
+                                    <span class="name">Приведи партнерів на 50000 USD</span>
+                                 </li>
+                                 <li><span class="val"> Бонус 2500 USD</span></li>
+                              </ul>
+                           </div>
+                           <div class="line">
+                              <ul>
+                                 <li>
+                                    <span class="num">7</span>
+                                    <span class="name">Приведи партнерів на 100000 USD</span>
+                                 </li>
+                                 <li><span class="val"> Бонус 5000 USD</span></li>
+                              </ul>
+                           </div>
+                           <div class="line">
+                              <ul>
+                                 <li>
+                                    <span class="num">8</span>
+                                    <span class="name">Приведи партнерів на 200000 USD</span>
+                                 </li>
+                                 <li><span class="val"> Бонус 10000 USD</span></li>
+                              </ul>
+                           </div>
+                           <div class="line">
+                              <ul>
+                                 <li>
+                                    <span class="num">9</span>
+                                    <span class="name">Приведи партнерів на 500000 USD</span>
+                                 </li>
+                                 <li><span class="val"> Бонус 25000 USD</span></li>
+                              </ul>
+                           </div>
+                           <div class="line">
+                              <ul>
+                                 <li>
+                                    <span class="num">10</span>
+                                    <span class="name">Приведи партнерів на 1000000 USD</span>
+                                 </li>
+                                 <li><span class="val"> Бонус 50000 USD</span></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="referalsList">
+                     <div class="wrapIn">
+                        <div class="line">
+                           <span class="title"> Загальний обіг структури</span>
+                           <ul>
+                              <li style="width: 100%;"><span class="val">10000 USD</span></li>
+
+                           </ul>
+                        </div>
+
+                     </div>
+                  </div>
+
+                  <h2 class="capTitle">реферали (рівень 1)</span></h2>
+                  <br />
+
+
+
+
+                  <div class="tableReferals">
+                     <div class="linkRf">
+                        <ul>
+                           <li><a href="refsys?level=1">1-го рівня</a></li>
+                           <li><a href="refsys?level=2">2-го рівня</a></li>
+                           <li><a href="refsys?level=3">3-го рівня</a></li>
+                           <li><a href="refsys?level=4">4-го рівня</a></li>
+                           <li><a href="refsys?level=5">5-го рівня</a></li>
+                        </ul>
+                     </div>
+                     <div class="tablelk">
+                        <div class="table">
+                           <div class="thead">
+                              <div class="tr">
+                                 <div class="td">логін</div>
+                                 <div class="td">дата реєстрації</div>
+                                 <div class="td">E-mail </div>
+                                 <div class="td">сума депозиту</div>
+                              </div>
+                           </div>
+                           <div class="tbody">
+                              <div class="tr">
+                                 <div class="td">
+                                    <span class="titMobile">логін</span>
+                                    <span class="name">test</span>
+                                 </div>
+                                 <div class="td">
+                                    <span class="titMobile">дата реєстрації</span>
+                                    <span class="date">14 грудня
+                                       2020, 03:46</span>
+                                 </div>
+                                 <div class="td">
+                                    <span class="titMobile">E-mail</span>
+                                    <a href="mailto:test@test.test" class="link">test@test.test</a>
+                                 </div>
+                                 <div class="td">
+                                    <span class="titMobile">сума депозиту</span>
+                                    <span class="sum pr">
+
+                                       10000.00 USD<br />
+
+                                       0.00 RUB<br />
+
+                                       0.000000 BTC<br />
+
+                                       0.000000 ETH<br />
+
+                                       0.00 LTC<br />
+                                    </span>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
                </div>
+
             </div>
          </div>
       </div>
